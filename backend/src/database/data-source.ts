@@ -1,0 +1,18 @@
+import "reflect-metadata"
+import { DataSource } from "typeorm"
+import User from "../models/User"
+import { CreateUsers1743688042218 } from "./migrations/1743688042218-CreateUsers"
+
+export const AppDataSource = new DataSource({
+    type: "mysql",
+    host: "u339198693_redesConputado",
+    port: 3306,
+    username: "u339198693_redes",
+    password: "",
+    database: "u339198693_redesConputado",
+    synchronize: true,
+    logging: false,
+    entities: [User],
+    migrations: [CreateUsers1743688042218],
+    subscribers: [],
+})
